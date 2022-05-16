@@ -278,7 +278,6 @@ class ApiController extends Controller
     public function heroSliderAddPost(Request $request)
     {
 
-        $slug = $this->slugOlustur($request->input('title'));
         $post = Http::withHeaders(['xc-auth' => env('XC_AUTH')])->post('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider',
         [
             "uniq_id" => $this->gen_uid(),
@@ -290,7 +289,6 @@ class ApiController extends Controller
             "button" => $request->input('button'),
             "media_path" => $request->input('media_path'),
             "status" => $request->input('status'),
-            "slug" => $slug
         ]);
         return  response($post->json());
     }
@@ -359,7 +357,6 @@ class ApiController extends Controller
                 "button" => $request->input('button'),
                 "media_path" => $request->input('media_path'),
                 "status" => $request->input('status'),
-                "slug" => $this->slugOlustur($request->input('title')),
             ]);
             return response()->json($post->json());
     }
@@ -388,5 +385,12 @@ class ApiController extends Controller
             }
     }
     #endregion
+
+    #region subscriptions
+
+
+
+    #endregion
+
 
 }
