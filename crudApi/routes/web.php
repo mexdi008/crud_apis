@@ -115,7 +115,7 @@ Route::get('/hero_slider/delete/{id}',[ApiController::class,'heroSliderDeletePos
 
 #endregion
 
-#region subscriptions
+#region Subscriptions Routes
 // create data for subscriptions
 Route::get('/subscriptions/create', function () {
     return view('subscriptions/subscriptionsPostData');
@@ -147,6 +147,75 @@ Route::post('/subscriptions/update/{id}',[ApiController::class, 'subscriptionsUp
 
 Route::get('/subscriptions/delete/{id}',[ApiController::class,'subscriptionsDeletePost']);
 
+
+#endregion
+
+#region contact_us routes
+// create data for contact_us
+Route::get('/contact_us/create', function () {
+    return view('contact_us/contactUsPostData');
+});
+Route::post('/contact_us/create',[ApiController::class,'contactUsAddPost']);
+
+// get all datas from contact_us
+Route::get('/contact_us/list/all',[ApiController::class,'contactUsGetAllPost']);
+
+// get data from contact_us by id
+Route::get('/contact_us/list', function(){
+    return view('contact_us/contactUsGetDataByUniqId');
+});
+Route::post('/contact_us/list/{id}',[ApiController::class, 'contactUsGetPostByUniqId']);
+
+//get data from contact_us findOne
+Route::get('/contact_us/list/findone', function(){
+    return view('contact_us/contactUsGetDataFindOne');
+});
+Route::post('/contact_us/list/findone/{id}',[ApiController::class, 'contactUsGetPostFindOne']);
+
+// update data from contact_us by id
+Route::get('/contact_us/update', function(){
+    return view('contact_us/contactUsUpdateData');
+});
+Route::post('/contact_us/update/{id}',[ApiController::class, 'contactUsUpdatePost']);
+
+// delete data from contact_us by id
+
+Route::get('/contact_us/delete/{id}',[ApiController::class,'contactUsDeletePost']);
+
+
+#endregion
+
+#region sectors
+// create data for sectors
+Route::get('/sectors/create', function () {
+    return view('sectors/sectorsPostData');
+});
+Route::post('/sectors/create',[ApiController::class,'sectorsAddPost']);
+
+// get all datas from sectors
+Route::get('/sectors/list/all',[ApiController::class,'sectorsGetAllPost']);
+
+// get data from sectors by id
+Route::get('/sectors/list', function(){
+    return view('sectors/sectorsGetDataByUniqId');
+});
+Route::post('/sectors/list/{id}',[ApiController::class, 'sectorsGetPostByUniqId']);
+
+//get data from sectors findOne
+Route::get('/sectors/list/findone', function(){
+    return view('sectors/sectorsGetDataFindOne');
+});
+Route::post('/sectors/list/findone/{id}',[ApiController::class, 'sectorsGetPostFindOne']);
+
+// update data from sectors by id
+Route::get('/sectors/update', function(){
+    return view('sectors/sectorsUpdateData');
+});
+Route::post('/sectors/update/{id}',[ApiController::class, 'sectorsUpdatePost']);
+
+// delete data from sectors by id
+
+Route::get('/sectors/delete/{id}',[ApiController::class,'sectorsDeletePost']);
 
 #endregion
 });

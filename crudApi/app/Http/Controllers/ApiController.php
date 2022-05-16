@@ -493,5 +493,223 @@ class ApiController extends Controller
 
     #endregion
 
+    #region contact_us
+
+    public function contactUsAddPost(Request $request)
+    {
+
+        $data= $request->validate(['email' => 'required|email',
+                                   ]);
+        $post = Http::withHeaders(['xc-auth' => env('XC_AUTH')])->post('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us',
+        [
+            "uniq_id" => $this->gen_uid(),
+            "fullname" => $request->input('fullname'),
+            "phone_number" => $request->input('phone_number'),
+            "email" => $request->input('email'),
+            "message" => $request->input('message'),
+            "status" => $request->input('status'),
+        ]);
+        return  response($post->json());
+    }
+
+    public function contactUsGetAllPost()
+    {
+        $response=Http::withHeaders([
+            'xc-auth' => env('XC_AUTH'),
+            'Content-Type' => 'application/json'
+            ])->get('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us');
+        return response()->json($response->json());
+    }
+
+    public function contactUsGetPostByUniqId(Request $request)
+    {
+        $uniq_id = $request->input('uniq_id');
+        $get_data=Http::withHeaders(
+            [
+                'xc-auth' => env('XC_AUTH'),
+                'Content-Type' => 'application/json'
+            ]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/?where=(uniq_id,like,".$uniq_id.")");
+            $id=($get_data[0]['id']);
+            $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/".$id);
+            return response()->json($response->json());
+    }
+
+    public function contactUsGetPostFindOne(Request $request)
+    {
+        $uniq_id = $request->input('uniq_id');
+        $get_data=Http::withHeaders(
+            [
+                'xc-auth' => env('XC_AUTH'),
+                'Content-Type' => 'application/json'
+            ]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/findOne?where=(uniq_id,like,".$uniq_id.")");
+            $id=($get_data['id']);
+            $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/".$id);
+            return response()->json($response->json());
+    }
+
+    public function contactUsUpdatePost(Request $request,$uniq_id)
+    {
+
+            $data= $request->validate(['email' => 'required|email']);
+            $get_data=Http::withHeaders([
+            'xc-auth' => env('XC_AUTH'),
+            'Content-Type' => 'application/json'
+            ])
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/?where=(uniq_id,like,".$uniq_id.")");
+            $id=$get_data[0]['id'];
+            
+            $post=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->put('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/'.$id,
+            [
+                "fullname" => $request->input('fullname'),
+                "phone_number" => $request->input('phone_number'),
+                "email" => $request->input('email'),
+                "message" => $request->input('message'),
+                "status" => $request->input('status'),
+            ]);
+            return response()->json($post->json());
+    }
+
+    public function contactUsDeletePost($id)
+    {
+        $get_data=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/?where=(uniq_id,like,".$id.")");
+            $id=($get_data[0]['id']);
+        $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->delete("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us/".$id);
+            if($response == true)
+            {
+                 return response()->json([
+                    'state' => 'true',
+                ]);
+            }
+            else
+            {
+                return response()->json([
+                    'state' => 'false',
+                ]);
+            }
+    }
+
+
+
+
+    #endregion
+
+    #region sectors
+
+    public function sectorsAddPost(Request $request)
+    {
+
+        $data= $request->validate(['title' => 'required']);
+        $post = Http::withHeaders(['xc-auth' => env('XC_AUTH')])->post('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors',
+        [
+            "uniq_id" => $this->gen_uid(),
+            "title" => $request->input('title'),
+        ]);
+        return  response($post->json());
+    }
+
+    public function sectorsGetAllPost()
+    {
+        $response=Http::withHeaders([
+            'xc-auth' => env('XC_AUTH'),
+            'Content-Type' => 'application/json'
+            ])->get('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors');
+        return response()->json($response->json());
+    }
+
+    public function sectorsGetPostByUniqId(Request $request)
+    {
+        $uniq_id = $request->input('uniq_id');
+        $get_data=Http::withHeaders(
+            [
+                'xc-auth' => env('XC_AUTH'),
+                'Content-Type' => 'application/json'
+            ]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/?where=(uniq_id,like,".$uniq_id.")");
+            $id=($get_data[0]['id']);
+            $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/".$id);
+            return response()->json($response->json());
+    }
+
+    public function sectorsGetPostFindOne(Request $request)
+    {
+        $uniq_id = $request->input('uniq_id');
+        $get_data=Http::withHeaders(
+            [
+                'xc-auth' => env('XC_AUTH'),
+                'Content-Type' => 'application/json'
+            ]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/findOne?where=(uniq_id,like,".$uniq_id.")");
+            $id=($get_data['id']);
+            $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/".$id);
+            return response()->json($response->json());
+    }
+
+    public function sectorsUpdatePost(Request $request,$uniq_id)
+    {
+
+            $data= $request->validate(['title' => 'required']);
+            $get_data=Http::withHeaders([
+            'xc-auth' => env('XC_AUTH'),
+            'Content-Type' => 'application/json'
+            ])
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/?where=(uniq_id,like,".$uniq_id.")");
+            $id=$get_data[0]['id'];
+            
+            $post=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->put('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/'.$id,
+            [
+                "title" => $request->input('title'),
+            ]);
+            return response()->json($post->json());
+    }
+
+    public function sectorsDeletePost($id)
+    {
+        $get_data=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/?where=(uniq_id,like,".$id.")");
+            $id=($get_data[0]['id']);
+        $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->delete("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/sectors/".$id);
+            if($response == true)
+            {
+                 return response()->json([
+                    'state' => 'true',
+                ]);
+            }
+            else
+            {
+                return response()->json([
+                    'state' => 'false',
+                ]);
+            }
+    }
+
+
+    #endregion
 
 }
