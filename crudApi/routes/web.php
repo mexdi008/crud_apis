@@ -80,7 +80,7 @@ Route::get('/brands/delete/{id}',[ApiController::class,'brandsDeletePost']);
 #endregion
 
 #region hero_slider Routes
-// create data for Brands
+// create data for hero_slider
 Route::get('/hero_slider/create', function () {
     return view('hero_slider/heroSliderPostData');
 });
@@ -115,6 +115,40 @@ Route::get('/hero_slider/delete/{id}',[ApiController::class,'heroSliderDeletePos
 
 #endregion
 
+#region subscriptions
+// create data for subscriptions
+Route::get('/subscriptions/create', function () {
+    return view('subscriptions/subscriptionsPostData');
+});
+Route::post('/subscriptions/create',[ApiController::class,'subscriptionsAddPost']);
+
+// get all datas from subscriptions
+Route::get('/subscriptions/list/all',[ApiController::class,'subscriptionsGetAllPost']);
+
+// get data from subscriptions by id
+Route::get('/subscriptions/list', function(){
+    return view('subscriptions/subscriptionsGetDataByUniqId');
+});
+Route::post('/subscriptions/list/{id}',[ApiController::class, 'subscriptionsGetPostByUniqId']);
+
+//get data from subscriptions findOne
+Route::get('/subscriptions/list/findone', function(){
+    return view('subscriptions/subscriptionsGetDataFindOne');
+});
+Route::post('/subscriptions/list/findone/{id}',[ApiController::class, 'subscriptionsGetPostFindOne']);
+
+// update data from subscriptions by id
+Route::get('/subscriptions/update', function(){
+    return view('subscriptions/subscriptionsUpdateData');
+});
+Route::post('/subscriptions/update/{id}',[ApiController::class, 'subscriptionsUpdatePost']);
+
+// delete data from subscriptions by id
+
+Route::get('/subscriptions/delete/{id}',[ApiController::class,'subscriptionsDeletePost']);
+
+
+#endregion
 });
 
 

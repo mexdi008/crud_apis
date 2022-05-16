@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
+use Validator;
 class ApiController extends Controller
 {
     function gen_uid($l=6){ return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyz"), 0, $l);}
@@ -76,11 +77,11 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json'
             ]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/?where=(uniq_id,like,".$uniq_id.")");
             $id=($get_data[0]['id']);
             $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/".$id);
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/".$id);
             return response()->json($response->json());
     }
 
@@ -93,11 +94,11 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json'
             ]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/findOne?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/findOne?where=(uniq_id,like,".$uniq_id.")");
             $id=($get_data['id']);
             $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/".$id);
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/".$id);
             return response()->json($response->json());
     }
 
@@ -107,7 +108,7 @@ class ApiController extends Controller
             'xc-auth' => env('XC_AUTH'),
             'Content-Type' => 'application/json'
             ])
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/?where=(uniq_id,like,".$uniq_id.")");
             $id=$get_data[0]['id'];
             
             $post=Http::withHeaders(
@@ -131,11 +132,11 @@ class ApiController extends Controller
         $get_data=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/?where=(uniq_id,like,".$id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/?where=(uniq_id,like,".$id.")");
             $id=($get_data[0]['id']);
         $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->delete("172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/".$id);
+            )->delete("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/administrative_staff/".$id);
             if($response == true)
             {
                  return response()->json([
@@ -192,11 +193,11 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json'
             ]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/?where=(uniq_id,like,".$uniq_id.")");
             $id=($get_data[0]['id']);
             $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/".$id);
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/".$id);
             return response()->json($response->json());
     }
 
@@ -209,11 +210,11 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json'
             ]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/findOne?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/findOne?where=(uniq_id,like,".$uniq_id.")");
             $id=($get_data['id']);
             $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/".$id);
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/".$id);
             return response()->json($response->json());
     }
 
@@ -223,7 +224,7 @@ class ApiController extends Controller
             'xc-auth' => env('XC_AUTH'),
             'Content-Type' => 'application/json'
             ])
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/?where=(uniq_id,like,".$uniq_id.")");
             $id=$get_data[0]['id'];
             
             $post=Http::withHeaders(
@@ -251,11 +252,11 @@ class ApiController extends Controller
         $get_data=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/?where=(uniq_id,like,".$id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/?where=(uniq_id,like,".$id.")");
             $id=($get_data[0]['id']);
         $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->delete("172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/".$id);
+            )->delete("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/brands/".$id);
             if($response == true)
             {
                  return response()->json([
@@ -302,7 +303,7 @@ class ApiController extends Controller
         return response()->json($response->json());
     }
 
-     public function heroSliderGetPostByUniqId(Request $request)
+    public function heroSliderGetPostByUniqId(Request $request)
     {
         $uniq_id = $request->input('uniq_id');
         $get_data=Http::withHeaders(
@@ -311,11 +312,11 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json'
             ]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/?where=(uniq_id,like,".$uniq_id.")");
             $id=($get_data[0]['id']);
             $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/".$id);
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/".$id);
             return response()->json($response->json());
     }
 
@@ -328,11 +329,11 @@ class ApiController extends Controller
                 'Content-Type' => 'application/json'
             ]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/findOne?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/findOne?where=(uniq_id,like,".$uniq_id.")");
             $id=($get_data['id']);
             $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/".$id);
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/".$id);
             return response()->json($response->json());
     }
 
@@ -342,7 +343,7 @@ class ApiController extends Controller
             'xc-auth' => env('XC_AUTH'),
             'Content-Type' => 'application/json'
             ])
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/?where=(uniq_id,like,".$uniq_id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/?where=(uniq_id,like,".$uniq_id.")");
             $id=$get_data[0]['id'];
             
             $post=Http::withHeaders(
@@ -366,11 +367,11 @@ class ApiController extends Controller
         $get_data=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
             )
-            ->get("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/?where=(uniq_id,like,".$id.")");
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/?where=(uniq_id,like,".$id.")");
             $id=($get_data[0]['id']);
         $response=Http::withHeaders(
             ['xc-auth' => env('XC_AUTH')]
-            )->delete("172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/".$id);
+            )->delete("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/hero_slider/".$id);
             if($response == true)
             {
                  return response()->json([
@@ -388,7 +389,107 @@ class ApiController extends Controller
 
     #region subscriptions
 
+    public function subscriptionsAddPost(Request $request)
+    {
 
+        $data= $request->validate(['email' => 'required|email',
+                                   'source' => 'required']);
+        $post = Http::withHeaders(['xc-auth' => env('XC_AUTH')])->post('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions',
+        [
+            "uniq_id" => $this->gen_uid(),
+            "email" => $request->input('email'),
+            "source" => $request->input('source'),
+        ]);
+        return  response($post->json());
+    }
+
+    public function subscriptionsGetAllPost()
+    {
+        $response=Http::withHeaders([
+            'xc-auth' => env('XC_AUTH'),
+            'Content-Type' => 'application/json'
+            ])->get('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions');
+        return response()->json($response->json());
+    }
+
+    public function subscriptionsGetPostByUniqId(Request $request)
+    {
+        $uniq_id = $request->input('uniq_id');
+        $get_data=Http::withHeaders(
+            [
+                'xc-auth' => env('XC_AUTH'),
+                'Content-Type' => 'application/json'
+            ]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/?where=(uniq_id,like,".$uniq_id.")");
+            $id=($get_data[0]['id']);
+            $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/".$id);
+            return response()->json($response->json());
+    }
+
+    public function subscriptionsGetPostFindOne(Request $request)
+    {
+        $uniq_id = $request->input('uniq_id');
+        $get_data=Http::withHeaders(
+            [
+                'xc-auth' => env('XC_AUTH'),
+                'Content-Type' => 'application/json'
+            ]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/findOne?where=(uniq_id,like,".$uniq_id.")");
+            $id=($get_data['id']);
+            $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/".$id);
+            return response()->json($response->json());
+    }
+
+    public function subscriptionsUpdatePost(Request $request,$uniq_id)
+    {
+        $data= $request->validate(['email' => 'required|email',
+                                   'source' => 'required']);
+            $get_data=Http::withHeaders([
+            'xc-auth' => env('XC_AUTH'),
+            'Content-Type' => 'application/json'
+            ])
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/?where=(uniq_id,like,".$uniq_id.")");
+            $id=$get_data[0]['id'];
+            
+            $post=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->put('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/'.$id,
+            [
+                "email" => $request->input('email'),
+                "source" => $request->input('source'),
+            ]);
+            return response()->json($post->json());
+    }
+
+     public function subscriptionsDeletePost($id)
+    {
+        $get_data=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )
+            ->get("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/?where=(uniq_id,like,".$id.")");
+            $id=($get_data[0]['id']);
+        $response=Http::withHeaders(
+            ['xc-auth' => env('XC_AUTH')]
+            )->delete("http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/subscriptions/".$id);
+            if($response == true)
+            {
+                 return response()->json([
+                    'state' => 'true',
+                ]);
+            }
+            else
+            {
+                return response()->json([
+                    'state' => 'false',
+                ]);
+            }
+    }
 
     #endregion
 
