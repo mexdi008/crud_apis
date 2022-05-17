@@ -1,0 +1,1710 @@
+{
+	"info": {
+		"_postman_id": "0167acf8-aaf3-42c4-82ef-3a3c16fdb563",
+		"name": "aga-group-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hero_slider",
+			"item": [
+				{
+					"name": "heroSliderAddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_index_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "d",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"value": "f",
+									"type": "text"
+								},
+								{
+									"key": "button",
+									"value": "g",
+									"type": "text"
+								},
+								{
+									"key": "media_path",
+									"value": "h",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/hero_slider/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"hero_slider",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "heroSliderGetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/hero_slider/list/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"hero_slider",
+								"list",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "heroSliderGetByUniqId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "6mhi1d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/hero_slider/list/6mhi1d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"hero_slider",
+								"list",
+								"6mhi1d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "heroSliderGetFindOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "6mhi1d",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/hero_slider/list/findone/uwjck3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"hero_slider",
+								"list",
+								"findone",
+								"uwjck3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "heroSliderUpdate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "f_index_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "button",
+									"value": "6w",
+									"type": "text"
+								},
+								{
+									"key": "media_path",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/hero_slider/update/6mhi1d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"hero_slider",
+								"update",
+								"6mhi1d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "heroSliderDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_token\" : \"Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/hero_slider/delete/qu2m9l",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"hero_slider",
+								"delete",
+								"qu2m9l"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brands",
+			"item": [
+				{
+					"name": "brandsAddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "trusted_partners",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "chronology",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "visionary_component",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "informative_component",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "global_partnership",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/brands/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"brands",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "brandsGetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/brands/list/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"brands",
+								"list",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "brandsGetByUniqId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "9pn3vm\n",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/brands/list/9pn3vm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"brands",
+								"list",
+								"9pn3vm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "brandsGetFindOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "9pn3vm",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/brands/list/findone/9pn3vm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"brands",
+								"list",
+								"findone",
+								"9pn3vm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "brandsUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "d7hrul",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "trusted_partners",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "chronology",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "visionary_component",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "informative_component",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "global_partnership",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/brands/update/9pn3vm",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"brands",
+								"update",
+								"9pn3vm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "brandsDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_token\" : \"Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/brands/delete/ps5xai",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"brands",
+								"delete",
+								"ps5xai"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "administrative_staff",
+			"item": [
+				{
+					"name": "administrativeStaffAddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "job_title",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "biography",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "social_media",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "activity",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "main_image",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/adminstrative/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"adminstrative",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "administrativeStaffGetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/administrative/list/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"administrative",
+								"list",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "administrativeStaffGetByUniqId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "m41wfu",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/administrative/list/m41wfu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"administrative",
+								"list",
+								"m41wfu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "administrativeStaffGetFindOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "m41wfu",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/administrative/list/findone/m41wfu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"administrative",
+								"list",
+								"findone",
+								"m41wfu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "administrativeStaffUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "m41wfu",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "job_title",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "biography",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "social_media",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "activity",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "main_image",
+									"value": "updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/administrative/update/m41wfu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"administrative",
+								"update",
+								"m41wfu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "administrativeStaffDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_token\" : \"Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/administrative/delete/wqlo42",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"administrative",
+								"delete",
+								"wqlo42"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscriptions",
+			"item": [
+				{
+					"name": "subscriptionsAddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "a@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "source",
+									"value": "d",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/subscriptions/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"subscriptions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptionsGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/subscriptions/list/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"subscriptions",
+								"list",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptionsGetByUniqId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "fwruip",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/subscriptions/list/fwruip",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"subscriptions",
+								"list",
+								"fwruip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptionsGetFindOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "fwruip",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/subscriptions/list/findone/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"subscriptions",
+								"list",
+								"findone",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptionsUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uniq_id",
+									"value": "fwruip",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "a@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "source",
+									"value": "update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/subscriptions/update/fwruip",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"subscriptions",
+								"update",
+								"fwruip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscriptionsDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_token\" : \"Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/subscriptions/delete/7y69f8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"subscriptions",
+								"delete",
+								"7y69f8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact_us",
+			"item": [
+				{
+					"name": "contactUsAddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "d",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "s",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "d",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "forwarded",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/contact_us/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"contact_us",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUsGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/contact_us/list/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"contact_us",
+								"list",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUsGetByUniqId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "drq536",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/contact_us/list/drq536",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"contact_us",
+								"list",
+								"drq536"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUsGetFindOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "drq536",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/contact_us/list/findone/drq536",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"contact_us",
+								"list",
+								"findone",
+								"drq536"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUsUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "drq536",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "update@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "update",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "forwarded",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/contact_us/update/drq536",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"contact_us",
+								"update",
+								"drq536"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contactUsDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_token\" : \"Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/contact_us/delete/hie3q9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"contact_us",
+								"delete",
+								"hie3q9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sectors",
+			"item": [
+				{
+					"name": "sectorsAddPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/sectors/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"sectors",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sectorsGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/sectors/list/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"sectors",
+								"list",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sectorsGetByUniqId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "hkz3lo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/sectors/list/hkz3lo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"sectors",
+								"list",
+								"hkz3lo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sectorsGetFindOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "hkz3lo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/sectors/list/findone/hkz3lo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"sectors",
+								"list",
+								"findone",
+								"hkz3lo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sectorsUpdate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_token",
+									"value": "Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK",
+									"type": "text"
+								},
+								{
+									"key": "uniq_id",
+									"value": "hkz3lo",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/sectors/update/hkz3lo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"sectors",
+								"update",
+								"hkz3lo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sectorsDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_token\" : \"Nx3v0Sr5yO4ojLVkamfT1YqEYjRzq6z55MBr2LBK\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/csadmin/sectors/delete/bcu6n1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"csadmin",
+								"sectors",
+								"delete",
+								"bcu6n1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
