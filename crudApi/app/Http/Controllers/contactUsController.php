@@ -39,7 +39,7 @@ class contactUsController extends Controller
         return $slug;
     }
     #region contact_us
-    public function contactUsAdd(Request $request)
+    public function contactUsAddPost(Request $request)
     {
         $data= $request->validate(['email' => 'required|email']);
         $post = Http::withHeaders(['xc-auth' => env('XC_AUTH')])->post('http://172.16.10.132:3574/nc/aga_project_tyds/api/v1/contact_us',
